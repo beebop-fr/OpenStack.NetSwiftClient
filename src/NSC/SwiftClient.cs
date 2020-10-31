@@ -17,6 +17,11 @@ namespace NetSwiftClient
         private string _Token;
         private string Token { get => DateTime.UtcNow < TokenExpiresAt ? _Token : null; set => _Token = value; }
         private DateTime TokenExpiresAt { get; set; }
+        public bool isAuthenticated {
+            get {
+                return Token != null;
+            }
+        }
 
         #region Identity/Authentication
         public Task<SwiftAuthV3Response> AuthenticateAsync(string authUrl, string name, string password, string domain = "Default")
