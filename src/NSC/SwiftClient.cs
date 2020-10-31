@@ -317,7 +317,7 @@ namespace NetSwiftClient
         /// <param name="objectStoreKey"></param>
         /// <param name="ipRange">1.2.3.4 or 1.2.3.0/24 </param>
         /// <returns></returns>
-        public string ObjectGetTmpUrlAsync(string objectStoreUrl, string container, string objectName, TimeSpan expiresIn, string objectStoreKey, string fileName = null, string ipRange = null, bool? noDownloadButInline = null)
+        public string ObjectGetTmpUrl(string objectStoreUrl, string container, string objectName, TimeSpan expiresIn, string objectStoreKey, string fileName = null, string ipRange = null, bool? noDownloadButInline = null)
         {
             // https://docs.openstack.org/kilo/config-reference/content/object-storage-tempurl.html
 
